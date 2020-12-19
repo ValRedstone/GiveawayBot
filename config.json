@@ -1,6 +1,6 @@
 {
   "token": "BOT TOKEN",
   "prefix": "!"
-  "everyoneMention": false, //true pour les mentions @everyone et false pour éviter la mention @everyone
+  "everyoneMention": false,
    "hostedBy": true
 }
