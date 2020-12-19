@@ -1,6 +1,6 @@
 {
   "token": "BOT TOKEN",
-  "prefix": "!"
-  "everyoneMention": false,
+  "prefix": "!",
+  "everyoneMention": false, //true pour autoriser les @everyone et false pour interdire les @everyone
    "hostedBy": true
 }
