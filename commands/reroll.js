@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
 
     // If no message ID or giveaway name is specified
     if(!args[0]){
-        return message.channel.send(":x: Merci de spécifier l'id d'un giveaway!");
+        return message.channel.send(`:x: Merci de spécifier l'id d'un giveaway!\n\`${client.config.prefix}reroll giveawayID\``);
     }
 
     // try to found the giveaway with prize then with ID
