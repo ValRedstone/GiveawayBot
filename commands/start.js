@@ -13,28 +13,28 @@ exports.run = async (client, message, args) => {
     let giveawayChannel = message.mentions.channels.first();
     // If no channel is mentionned
     if(!giveawayChannel){
-        return message.channel.send(":x: Merci d'entrer un salon valide pour faire un giveaway `d.start-gw #channel`");
+        return message.channel.send(`:x: Merci d'entrer un salon valide pour faire un giveaway \`${client.config.prefix}start-gw #channel\``);
     }
 
     // Giveaway duration
     let giveawayDuration = args[1];
     // If the duration isn't valid
     if(!giveawayDuration || isNaN(ms(giveawayDuration))){
-        return message.channel.send(":x: Merci d'entrer une durée valide pour le giveaway `d.start-gw #channel [1s/m/d]`");
+        return message.channel.send(`:x: Merci d'entrer une durée valide pour le giveaway \`${client.config.prefix}start-gw #channel [1s/m/d]\``);
     }
 
     // Number of winners
     let giveawayNumberWinners = args[2];
     // If the specified number of winners is not a number
     if(isNaN(giveawayNumberWinners) || (parseInt(giveawayNumberWinners) <= 0)){
-        return message.channel.send(":x: Merci d'entrer un nombre valide de gagnants `d.start-gw #channel [1s/m/d] [nombre]`");
+        return message.channel.send(`:x: Merci d'entrer un nombre valide de gagnants \`${client.config.prefix}start-gw #channel [1s/m/d] [nombre]\``);
     }
 
     // Giveaway prize
     let giveawayPrize = args.slice(3).join(' ');
     // If no prize is specified
     if(!giveawayPrize){
-        return message.channel.send(':x: Merci de spécifier un cadeau `d.start-gw [#channel] [1s/m/d] [nombre] [cadeau]`');
+        return message.channel.send(`:x: Merci de spécifier un cadeau \`${client.config.prefix}start-gw [#channel] [1s/m/d] [nombre] [cadeau]\``);
     }
 
     // Start the giveaway
